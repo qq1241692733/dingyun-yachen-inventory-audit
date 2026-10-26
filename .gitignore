@@ -1,0 +1,37 @@
+node_modules/
+build/
+dist/
+coverage/
+.DS_Store
+*.log
+.env*
+!.env.example
+
+# ── 文档与内部资料（对外只暴露 README.md）────────────────────────
+/知识库/
+/知识库-RAG建设方案/
+/设计探索/
+/_备份/
+/_验收/
+/api-docs/
+/DESIGN.md
+/PRODUCT_REQUIREMENTS_DOCUMENT.md
+/调整方案-V3.md
+/重构验收报告-V2.md
+/AGENTS.md
+/CLAUDE.md
+
+# ── Python 缓存 ────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+
+# ── 本地工具与索引 ─────────────────────────────────────────────
+/.claude/
+/.gitnexus/
+/.qa/
+/.idea/
+
+# ── 运行时产物与密钥 ───────────────────────────────────────────
+/server/data/token.txt
+/server/logs/
+/server/data/*.bak

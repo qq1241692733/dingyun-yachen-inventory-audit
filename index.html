@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>鼎运雅辰品质体验中心 · 运营与合伙人库存审计系统</title>
+    <meta name="description" content="鼎运雅辰品质体验中心会所日常运营与合伙人库存审计管理系统：货权出入审计、双签存证、库存与货值统计、跨人借调流转、加盟商房租续约与到期提醒。" />
+    <meta property="og:title" content="鼎运雅辰品质体验中心 · 运营与合伙人库存审计系统" />
+    <meta property="og:description" content="货权出入审计、双签存证、库存与货值统计、跨人借调流转、加盟商房租续约与到期提醒。" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <!-- 外观预热：必须在任何样式生效前把 data-theme / data-mode 写上 <html>，
+         否则首屏会先按默认主题画一帧再跳到用户选的那套（闪白/闪暗）。
+         这段是内联的、阻塞渲染的，逻辑与 src/utils/theme.ts 保持一致。 -->
+    <script>
+      (function () {
+        try {
+          var t = localStorage.getItem('dyyc.appearance.theme');
+          var m = localStorage.getItem('dyyc.appearance.mode');
+          if (t !== 'quiet' && t !== 'brass') t = 'quiet';
+          if (m !== 'light' && m !== 'dark') m = 'system';
+          var dark =
+            m === 'dark' ||
+            (m === 'system' &&
+              window.matchMedia &&
+              window.matchMedia('(prefers-color-scheme: dark)').matches);
+          var el = document.documentElement;
+          el.dataset.theme = t;
+          el.dataset.mode = dark ? 'dark' : 'light';
+        } catch (e) {
+          document.documentElement.dataset.theme = 'quiet';
+          document.documentElement.dataset.mode = 'light';
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+

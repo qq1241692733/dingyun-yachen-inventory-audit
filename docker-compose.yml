@@ -1,0 +1,12 @@
+services:
+  dingyun-inventory-system:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: dingyun-inventory-app
+    restart: unless-stopped
+    ports:
+      # 前面是您服务器对外访问的端口，后面是容器内部端口
+      - "8080:80"
+    environment:
+      - NODE_ENV=production

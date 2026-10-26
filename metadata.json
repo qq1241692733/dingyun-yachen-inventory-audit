@@ -1,0 +1,6 @@
+{
+  "name": "鼎运雅辰品质体验中心",
+  "description": "鼎运雅辰品质体验中心会所日常运营与合伙人库存审计管理系统，支持全球2700+会所加盟商房租与到期提醒、货权出入审计、库存总量统计及借调流转。",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
