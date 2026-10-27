@@ -194,12 +194,15 @@ app.get('/health', (req, res) => {
 });
 
 app.get('/api/meta', (req, res) => {
+  // ⚠️ source/updatedAt 各取一次 getState() 会触发两次整仓深拷贝，
+  //    解构一次拿全，避免把只读两个标量的请求放大成两次快照。
+  const { source, updatedAt } = store.getState();
   res.json({
     ok: true,
     service: SERVER_INFO,
     revision: store.getRevision(),
-    source: store.getState().source,
-    updatedAt: store.getState().updatedAt,
+    source,
+    updatedAt,
     llm: {
       streamableHttp: '/mcp',
       legacySse: '/sse',
